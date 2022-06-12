@@ -1,18 +1,20 @@
 # Traffic-Light  
 ## Description  
 This is a simple traffic light made with a LOLIN D32 board.  
+It is made with non-blocking code in mind, this means that there is no use of delay().  
+We use millis() and interupts to make this happen.
 ## Usage  
 When the LOLIN D32 board is powered the traffic light will start in the standard state.
 The cycle of the standard state is as follows:  
 - 5s green  
 - 2s yellow  
 - 5s red  
-- 2s yellow  
-
+- 2s yellow    
 When the button is pressed the traffic light will go into the maintenance state.  
 The cycle of the maintenance state is as follows:  
-- 1s yellow on
-- 1s yellow off
+- 1s yellow on  
+- 1s yellow off    
+If the button is pressed again the traffic light will change back to the standard state.  
 ## Parts Required  
 - 1 Lolin D32 board  
 - 3 Leds (Red, Yellow, Green)  
