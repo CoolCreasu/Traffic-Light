@@ -19,8 +19,11 @@ The cycle of the maintenance state is as follows:
    
 If the button is pressed again the traffic light will change back to the standard state.  
 
-## Parts Required  
+## Required Parts  
 - 1 Lolin D32 board  
 - 3 Leds (Red, Yellow, Green)  
 - 3 Resistors (3 x 100 Ohm for 3,3V)  
 - 1 Button (Internal pullup)  
+
+## Required Software  
+The arduino IDE (https://www.arduino.cc/en/software)
