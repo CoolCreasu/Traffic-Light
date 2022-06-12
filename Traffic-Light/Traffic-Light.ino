@@ -46,12 +46,24 @@ void standardState()
   {
     case 0:
     updateLeds(true, false, false);
+    if (evaluateTime(5000))
+    {
+      cycleIndex = 1;
+    }
     break;
     case 1:
     updateLeds(false, true, false);
+    if (evaluateTime(1000))
+    {
+      cycleIndex = 2;
+    }
     break;
     case 2:
     updateLeds(false, false, true);
+    if (evaluateTime(5000))
+    {
+      cycleIndex = 3;
+    }
     break;
     default:
     state = maintenance;
