@@ -46,7 +46,6 @@ void standardState()
   {
     case 0:
     updateLeds(true, false, false);
-    if 
     break;
     case 1:
     updateLeds(false, true, false);
@@ -95,7 +94,7 @@ void changeState()
 
 bool evaluateTime(unsigned long interval)
 {
-  if (timestamp+timeBetween < millis())
+  if (previousTime + interval < millis())
   {
     previousTime = millis();
     return true;
