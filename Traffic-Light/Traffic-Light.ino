@@ -11,6 +11,7 @@ enum states
 };
 
 int state;
+int cycleIndex;
 
 void setup()
 {
@@ -42,10 +43,32 @@ void loop()
 
 void standardState()
 {
+  switch(cycleIndex)
+  {
+    case 0:
+    updateLeds(true, true, true);
+    break;
+    case 1:
+    break;
+    case 2:
+    break;
+    default:
+    state = maintenance;
+    break;
+  }
 }
 
 void maintenanceState()
 {
+  switch (cycleIndex)
+  {
+    case 0:
+    break;
+    case 1:
+    break;
+    default:
+    break;
+  }
 }
 
 void changeState()
@@ -64,7 +87,18 @@ void changeState()
   }
 }
 
-bool evaluateTime(unsigned long timeValue = 0)
+bool evaluateTime(unsigned long timestamp, unsigned long timeBetween)
 {
-  switch()
+  if (timestamp+timeBetween < millis())
+  {
+    return true;
+  }
+  return false;
+}
+
+void updateLeds(bool g, bool r, bool y)
+{
+  digitalWrite(green, g);
+  digitalWrite(yellow, y);
+  digitalWrite(red, r);
 }
