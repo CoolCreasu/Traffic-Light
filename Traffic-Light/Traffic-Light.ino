@@ -17,11 +17,13 @@ void setup()
   pinMode(button, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(button), changeState, FALLING);
 
-  pinMode(red, INPUT);
-  pinMode(yellow, INPUT);
-  pinMode(green, INPUT);
+  pinMode(red, OUTPUT);
+  pinMode(yellow, OUTPUT);
+  pinMode(green, OUTPUT);
 
   state = standard;
+
+  Serial.begin(115200);
 }
 
 void loop()
@@ -38,16 +40,22 @@ void loop()
     state = maintenance;
     break;
   }
+
+  Serial.println(state);
 }
 
 void standardState()
 {
   digitalWrite(green, HIGH);
+  digitalWrite(red, HIGH);
+  digitalWrite(yellow, HIGH);
 }
 
 void maintenanceState()
 {
   digitalWrite(green, LOW);
+  digitalWrite(red, LOW);
+  digitalWrite(yellow, LOW);
 }
 
 void changeState()
