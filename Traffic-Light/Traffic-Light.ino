@@ -53,7 +53,7 @@ void standardState()
     break;
     case 1:
     updateLeds(false, true, false);
-    if (evaluateTime(1000))
+    if (evaluateTime(2000))
     {
       cycleIndex = 2;
     }
@@ -65,8 +65,15 @@ void standardState()
       cycleIndex = 3;
     }
     break;
+    case 3:
+    updateLeds(false, true, false);
+    if (evaluateTime(2000))
+    {
+      cycleIndex = 0;
+    }
+    break;
     default:
-    state = maintenance;
+    cycleIndex = 0;
     break;
   }
 }
@@ -77,11 +84,20 @@ void maintenanceState()
   {
     case 0:
     updateLeds(false, true, false);
+    if (evaluateTime(1000))
+    {
+      cycleIndex = 1;
+    }
     break;
     case 1:
     updateLeds(false, false, false);
+    if (evaluateTime(1000))
+    {
+      cycleIndex = 0;
+    }
     break;
     default:
+    cycleIndex = 0;
     break;
   }
 }
