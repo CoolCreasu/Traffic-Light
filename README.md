@@ -11,7 +11,7 @@ In the standard mode the cycle is as follows:
 - 2s yellow  
 - 5s red  
 - 2s yellow  
-In the maintennce mode the cycle is as follows:  
+In the maintenance mode the cycle is as follows:  
 - 1s yellow on
 - 1s yellow off
 ## Parts Required  
