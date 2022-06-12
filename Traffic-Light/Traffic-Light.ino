@@ -64,7 +64,7 @@ void changeState()
   }
 }
 
-bool evaluateTime(unsigned long )
+bool evaluateTime(unsigned long timeValue = 0)
 {
   switch()
 }
