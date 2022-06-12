@@ -1,8 +1,8 @@
 # Traffic-Light  
 ## Description  
 This is a simple traffic light made with a LOLIN D32 board.  
-It is made with non-blocking code in mind, this means that there is no use of delay().  
-We use millis() and interupts to make this happen.  
+It is made with non-blocking code in mind, this means that there is no use of delay().
+We use millis() and interupts instead.  
 
 ## Usage  
 When the LOLIN D32 board is powered the traffic light will start in the standard state.
