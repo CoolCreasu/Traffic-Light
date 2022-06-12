@@ -8,6 +8,7 @@ The cycle of the standard state is as follows:
 - 2s yellow  
 - 5s red  
 - 2s yellow  
+
 When the button is pressed the traffic light will go into the maintenance state.  
 The cycle of the maintenance state is as follows:  
 - 1s yellow on
