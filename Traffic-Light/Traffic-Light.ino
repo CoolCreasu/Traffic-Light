@@ -10,8 +10,9 @@ enum states
   maintenance,
 };
 
-int state;
-int cycleIndex;
+int state = 0;
+int cycleIndex = 0;
+unsigned long previousTime = 0;
 
 void setup()
 {
@@ -21,8 +22,6 @@ void setup()
   pinMode(red, OUTPUT);
   pinMode(yellow, OUTPUT);
   pinMode(green, OUTPUT);
-
-  state = standard;
 }
 
 void loop()
@@ -47,6 +46,7 @@ void standardState()
   {
     case 0:
     updateLeds(true, false, false);
+    if 
     break;
     case 1:
     updateLeds(false, true, false);
@@ -77,6 +77,8 @@ void maintenanceState()
 
 void changeState()
 {
+  updateLeds(false, false, false);
+  cycleIndex = 0;
   switch(state)
   {
     case standard:
@@ -91,10 +93,11 @@ void changeState()
   }
 }
 
-bool evaluateTime(unsigned long timestamp, unsigned long timeBetween)
+bool evaluateTime(unsigned long interval)
 {
   if (timestamp+timeBetween < millis())
   {
+    previousTime = millis();
     return true;
   }
   return false;
