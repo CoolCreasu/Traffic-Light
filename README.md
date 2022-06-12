@@ -8,7 +8,10 @@ The cycle of the standard state is as follows:
 - 2s yellow  
 - 5s red  
 - 2s yellow  
-
+When the button is pressed the traffic light will go into the maintenance state.  
+The cycle of the maintenance state is as follows:  
+- 1s yellow on
+- 1s yellow off
 ## Parts Required  
 - 1 Lolin D32 board  
 - 3 Leds (Red, Yellow, Green)  
