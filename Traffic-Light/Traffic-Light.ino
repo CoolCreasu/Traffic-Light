@@ -46,11 +46,13 @@ void standardState()
   switch(cycleIndex)
   {
     case 0:
-    updateLeds(true, true, true);
+    updateLeds(true, false, false);
     break;
     case 1:
+    updateLeds(false, true, false);
     break;
     case 2:
+    updateLeds(false, false, true);
     break;
     default:
     state = maintenance;
@@ -63,8 +65,10 @@ void maintenanceState()
   switch (cycleIndex)
   {
     case 0:
+    updateLeds(false, true, false);
     break;
     case 1:
+    updateLeds(false, false, false);
     break;
     default:
     break;
