@@ -22,8 +22,6 @@ void setup()
   pinMode(green, OUTPUT);
 
   state = standard;
-
-  Serial.begin(115200);
 }
 
 void loop()
@@ -40,22 +38,14 @@ void loop()
     state = maintenance;
     break;
   }
-
-  Serial.println(state);
 }
 
 void standardState()
 {
-  digitalWrite(green, HIGH);
-  digitalWrite(red, HIGH);
-  digitalWrite(yellow, HIGH);
 }
 
 void maintenanceState()
 {
-  digitalWrite(green, LOW);
-  digitalWrite(red, LOW);
-  digitalWrite(yellow, LOW);
 }
 
 void changeState()
@@ -72,4 +62,9 @@ void changeState()
     state = maintenance;
     break;
   }
+}
+
+bool evaluateTime(unsigned long )
+{
+  switch()
 }
