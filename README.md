@@ -2,18 +2,12 @@
 ## Description  
 This is a simple traffic light made with a LOLIN D32 board.  
 ## Usage  
-The traffic light has 2 states/modes:  
-- standard  
-- maintenance  
-When the button is pressed the board will switch between these states.  
-In the standard mode the cycle is as follows:  
-- 5s green  
-- 2s yellow  
-- 5s red  
-- 2s yellow  
-In the maintenance mode the cycle is as follows:  
-- 1s yellow on
-- 1s yellow off
+When the LOLIN D32 board is powered the traffic light will start in the standard state.
+The cycle of the standard state is as follows:
+- 5s green
+- 2s yellow
+- 5s red
+- 2s yellow
 ## Parts Required  
 - 1 Lolin D32 board  
 - 3 Leds (Red, Yellow, Green)  
