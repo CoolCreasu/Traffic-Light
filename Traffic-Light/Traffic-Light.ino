@@ -102,7 +102,7 @@ bool evaluateTime(unsigned long interval)
   return false;
 }
 
-void updateLeds(bool g, bool r, bool y)
+void updateLeds(bool g, bool y, bool r)
 {
   digitalWrite(green, g);
   digitalWrite(yellow, y);
