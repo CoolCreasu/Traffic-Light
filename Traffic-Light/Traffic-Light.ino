@@ -1,5 +1,9 @@
 const int button = 5;
 
+const int red = 16;
+const int yellow = 17;
+const int green = 18;
+
 enum states
 {
   standard,
@@ -12,6 +16,10 @@ void setup()
 {
   pinMode(button, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(button), changeState, FALLING);
+
+  pinMode(red, INPUT);
+  pinMode(yellow, INPUT);
+  pinMode(green, INPUT);
 
   state = standard;
 }
@@ -34,12 +42,12 @@ void loop()
 
 void standardState()
 {
-  
+  digitalWrite(green, HIGH);
 }
 
 void maintenanceState()
 {
-  
+  digitalWrite(green, LOW);
 }
 
 void changeState()
