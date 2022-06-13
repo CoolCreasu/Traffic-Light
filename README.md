@@ -29,7 +29,7 @@ If the button is pressed again the traffic light will change back to the standar
 
 #### Software  
 The arduino IDE (https://www.arduino.cc/en/software)  
-The IDE allows you to edit and compile to code as well as sending it to the LOLIN D32 board.  
+The IDE allows you to edit and compile the code as well as sending it to the LOLIN D32 board.  
 
 ## Schematic
 ![My Image](Traffic-Light-Schematic.PNG)
