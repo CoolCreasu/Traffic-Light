@@ -32,4 +32,4 @@ The arduino IDE (https://www.arduino.cc/en/software)
 The IDE allows you to edit and compile to code as well as sending it to the LOLIN D32 board.  
 
 ## Schematic
-![My Image](Traffic-Light-Schematic.png)
+![My Image](Traffic-Light-Schematic.PNG)
