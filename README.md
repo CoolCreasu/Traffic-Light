@@ -4,6 +4,8 @@ This is a simple traffic light made with a LOLIN D32 board.
 It is made with non-blocking code in mind, that means that there is no use of delay().  
 We use millis() and interupts instead.  
 
+---
+
 ## Usage  
 When the LOLIN D32 board is powered the traffic light will start in the standard state.
 The cycle of the standard state is as follows:  
@@ -19,6 +21,8 @@ The cycle of the maintenance state is as follows:
    
 If the button is pressed again the traffic light will change back to the standard state.  
 
+---
+
 ## Requirements  
 
 #### Parts  
@@ -30,6 +34,8 @@ If the button is pressed again the traffic light will change back to the standar
 #### Software  
 The arduino IDE (https://www.arduino.cc/en/software)  
 The IDE allows you to edit and compile the code as well as sending it to the LOLIN D32 board.  
+
+---
 
 ## Schematic
 ![My Image](Traffic-Light-Schematic.PNG)
